@@ -3,7 +3,7 @@ class Player extends Sprite{
         super({imageSrc, frameRate, animations})
         this.position = {
             x: 100,
-            y: 0
+            y: 400
         }
 
         this.sides = {
@@ -22,13 +22,14 @@ class Player extends Sprite{
 
         this.collisionBlocks = collisionBlocks
 
+        this.frameBuffer = 24
     }
 
     update(){
         //this is the blue box
         // ctx.fillStyle = 'rgba(0, 0, 255, 0.5'
         // ctx.fillRect(this.position.x, this.position.y, this.width, this.height)
-        this.position.x += this.velocity.x
+        //this.position.x += this.velocity.x
 
         this.updateHitbox()
 

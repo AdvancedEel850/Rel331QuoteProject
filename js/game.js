@@ -67,58 +67,31 @@ const player = new Player({
         }
     }
 })
-var coins = [];
-function __init__(){
-    for(let i = 0; i < generateRandom(25,100); i++){
-    coins[i] = new Coin({position: {
-        x: generateRandom(350, canvas.width - 50),
-        y: generateRandom(200, 400)
-    },
-    imageSrc: './img/coinRotates.png',
-    frameRate: 9,
+const thought = new thoughtBubble({
+    collisionBlocks,
+    imageSrc:'./img/Thought.png',
+    frameRate: 8,
+    animations: {
+        idleLeft: {
+                frameRate: 8,
+                frameBuffer: 64,
+                loop: true,
+                imageSrc: './img/thought.png'
+        },
+        idleRight: {
+            frameRate: 8,
+            frameBuffer: 64,
+            loop: true,
+            imageSrc: './img/thought.png'
+        }
+    }
+})
 
-    }) 
-    }
-    player.velocity.x = 0
-    player.velocity.y = 0
-    player.position.x = 50
-    player.position.y = 50
-}
-const keys ={
-    w:{
-        pressed: false
-    },
-    a:{
-        pressed: false
-    },
-    d:{
-        pressed: false
-    }
-}
 function animate(){
-    if(coins.length != 0)window.requestAnimationFrame(animate);
+    window.requestAnimationFrame(animate);
     ctx.fillStyle = 'Black'
     ctx.fillRect(0,0,canvas.width, canvas.height)
 
-    player.velocity.x = 0
-    if (keys.d.pressed) {
-        player.switchSprite('runRight')
-        this.lastdirection = 'right'
-        player.velocity.x = 4
-    }
-    else if (keys.a.pressed) {
-        player.switchSprite('runLeft')
-        this.lastdirection = 'left'
-        player.velocity.x = -4
-    }
-    else{
-        if(this.lastdirection == 'left'){
-            player.switchSprite('idleLeft')
-        }
-        else{
-            player.switchSprite('idleRight')
-        }
-    }
 
     background.draw()
     collisionBlocks.forEach(collisionBlock =>{
@@ -127,26 +100,13 @@ function animate(){
     
     player.draw()
     player.update()
-    for(let i = 0; i < coins.length; i++){
-        coins[i].draw()
-        coins[i].updateCoin()
-        if(coins[i].position.y >= 20000){
-            coins.splice(i, 1)
-        }
-    }
-    if(coins.length == 0){
-        popup.style.display = 'flex'
-        
-    }
+    thought.draw()
 
 }
 
 var popup = document.querySelector("#startPopup")
 var startGameButton = document.querySelector("#startGame")
 
-startGameButton.addEventListener('click', (event => {
-    popup.style.display = 'none'
-    __init__()
-    animate()
-}))
+animate()
+
 
