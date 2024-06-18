@@ -1,9 +1,30 @@
 body{
     background-color: black;
     z-index: -1;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
 }
-.canvas
+#canvas
 {
+    align-items: center;
     width: max-content;
     height: max-content;
+    border: 1px solid black; 
 }
+#text-overlay 
+{ 
+    position: absolute;
+    width:1000px;
+    height:200px;
+    text-align: center;
+    vertical-align: center; 
+    top: 10%; 
+    left: 10%; 
+    margin: 100px 100px 100px 100px;
+    font-size: 24px; 
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+} 

@@ -70,3 +70,20 @@
 //     }
 
 // })
+
+addEventListener('keydown', (event) => {
+    switch (event.key){
+        case 'ArrowUp':
+            quotes.updateup();
+            break
+        case 'ArrowLeft':
+            quotes.updateleft();
+            break
+        case 'ArrowRight':
+            quotes.updateright();
+            break
+        case 'ArrowDown':
+            quotes.updatedown();
+            break
+    }
+})

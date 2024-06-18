@@ -1,3 +1,5 @@
+const textbox = document.querySelector("#text-overlay");
+
 class Quote{
     constructor({quotesToUse = [], quoteindex, font ="50px Arial"}){
         this.quoteindex = quoteindex
@@ -17,12 +19,111 @@ class Quote{
     }
 
 
-    update()
+    updatedown()
     {
-        this.position.x += this.velocity.x
-        this.position.y += this.velocity.y
-        this.checkForLeftScreen()
+        // Move the subject back like a spotify music track
+        if (this.quoteindex <= 0)
+        {
+            this.quoteindex = 77;
+        }
+        else if(this.quoteindex <= 11)
+        {
+            this.quoteindex = 0;
+        }
+        else if (this.quoteindex <= 22)
+        {
+            this.quoteindex = 11;
+        } 
+        else if (this.quoteindex <= 33)
+        {
+            this.quoteindex = 22;
+        }
+        else if (this.quoteindex <= 44)
+        {
+            this.quoteindex = 33;
+        }
+        else if (this.quoteindex <= 55)
+        {
+            this.quoteindex = 44;
+        }
+        else if (this.quoteindex <= 66)
+        {
+            this.quoteindex = 55;
+        }
+        else if (this.quoteindex <= 77)
+        {
+            this.quoteindex = 66;
+        }
+        else
+        {
+            this.quoteindex = 77;
+        }
+        
     }
+
+    updateup()
+    {
+        // Move the subject forward like a spotify music track
+        if(this.quoteindex <= 11)
+            {
+                this.quoteindex = 11;
+            }
+            else if (this.quoteindex <= 22)
+            {
+                this.quoteindex = 22;
+            } 
+            else if (this.quoteindex <= 33)
+            {
+                this.quoteindex = 33;
+            }
+            else if (this.quoteindex <= 44)
+            {
+                this.quoteindex = 44;
+            }
+            else if (this.quoteindex <= 55)
+            {
+                this.quoteindex = 55;
+            }
+            else if (this.quoteindex <= 66)
+            {
+                this.quoteindex = 66;
+            }
+            else if (this.quoteindex < 77)
+            {
+                this.quoteindex = 77;
+            }
+            else
+            {
+                this.quoteindex = 0;
+            }
+    }
+
+    updateright()
+    {
+        // move one quote forward
+        if (this.quoteindex == 99)
+        {
+            this.quoteindex = 0;
+        }
+        else
+        {
+            this.quoteindex++;
+        }
+    }
+
+    updateleft()
+    {
+        // move one quote forward
+        if (this.quoteindex == 0)
+        {
+            this.quoteindex = 99;
+        }
+        else
+        {
+            this.quoteindex--;
+        }
+    }
+
 
     changeposition(y = this.position.y, x = this.position.x)
     {
@@ -34,9 +135,7 @@ class Quote{
     display()
     {
         this.quoteToDisplay = this.quotesToUse[this.quoteindex]
-        ctx.font = this.font;
-        ctx.fillStyle = "ForestGreen";
-        ctx.fillText(this.quoteToDisplay, this.position.x, this.position.y)
+        textbox.textContent = this.quoteToDisplay;
     }
 
     checkForLeftScreen()
