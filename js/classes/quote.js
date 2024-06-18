@@ -64,27 +64,27 @@ class Quote{
     updateup()
     {
         // Move the subject forward like a spotify music track
-        if(this.quoteindex <= 11)
+        if(this.quoteindex < 11)
             {
                 this.quoteindex = 11;
             }
-            else if (this.quoteindex <= 22)
+            else if (this.quoteindex < 22)
             {
                 this.quoteindex = 22;
             } 
-            else if (this.quoteindex <= 33)
+            else if (this.quoteindex < 33)
             {
                 this.quoteindex = 33;
             }
-            else if (this.quoteindex <= 44)
+            else if (this.quoteindex < 44)
             {
                 this.quoteindex = 44;
             }
-            else if (this.quoteindex <= 55)
+            else if (this.quoteindex < 55)
             {
                 this.quoteindex = 55;
             }
-            else if (this.quoteindex <= 66)
+            else if (this.quoteindex < 66)
             {
                 this.quoteindex = 66;
             }
@@ -101,7 +101,7 @@ class Quote{
     updateright()
     {
         // move one quote forward
-        if (this.quoteindex == 99)
+        if (this.quoteindex == 77)
         {
             this.quoteindex = 0;
         }
@@ -116,7 +116,7 @@ class Quote{
         // move one quote forward
         if (this.quoteindex == 0)
         {
-            this.quoteindex = 99;
+            this.quoteindex = 77;
         }
         else
         {
