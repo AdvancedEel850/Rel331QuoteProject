@@ -122,8 +122,6 @@ let quote_quotes = ["Our Divine Identity",
 
 "Personal Topic - No Quotes to share"];
 
-let reference_references = ["Reference"];
-
 const background = new Sprite({
     position: {
     x:0,
