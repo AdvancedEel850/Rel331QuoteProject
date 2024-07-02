@@ -24,39 +24,39 @@ class Quote{
         // Move the subject back like a spotify music track
         if (this.quoteindex <= 0)
         {
-            this.quoteindex = 77;
+            this.quoteindex = 84;
         }
-        else if(this.quoteindex <= 11)
+        else if(this.quoteindex <= 12)
         {
             this.quoteindex = 0;
         }
-        else if (this.quoteindex <= 22)
+        else if (this.quoteindex <= 24)
         {
-            this.quoteindex = 11;
+            this.quoteindex = 12;
         } 
-        else if (this.quoteindex <= 33)
+        else if (this.quoteindex <= 36)
         {
-            this.quoteindex = 22;
+            this.quoteindex = 24;
         }
-        else if (this.quoteindex <= 44)
+        else if (this.quoteindex <= 48)
         {
-            this.quoteindex = 33;
+            this.quoteindex = 36;
         }
-        else if (this.quoteindex <= 55)
+        else if (this.quoteindex <= 60)
         {
-            this.quoteindex = 44;
+            this.quoteindex = 48;
         }
-        else if (this.quoteindex <= 66)
+        else if (this.quoteindex <= 72)
         {
-            this.quoteindex = 55;
+            this.quoteindex = 60;
         }
-        else if (this.quoteindex <= 77)
+        else if (this.quoteindex <= 84)
         {
-            this.quoteindex = 66;
+            this.quoteindex = 72;
         }
         else
         {
-            this.quoteindex = 77;
+            this.quoteindex = 84;
         }
         
     }
@@ -64,33 +64,33 @@ class Quote{
     updateup()
     {
         // Move the subject forward like a spotify music track
-        if(this.quoteindex < 11)
+        if(this.quoteindex < 12)
             {
-                this.quoteindex = 11;
+                this.quoteindex = 12;
             }
-            else if (this.quoteindex < 22)
+            else if (this.quoteindex < 24)
             {
-                this.quoteindex = 22;
+                this.quoteindex = 24;
             } 
-            else if (this.quoteindex < 33)
+            else if (this.quoteindex < 36)
             {
-                this.quoteindex = 33;
+                this.quoteindex = 36;
             }
-            else if (this.quoteindex < 44)
+            else if (this.quoteindex < 48)
             {
-                this.quoteindex = 44;
+                this.quoteindex = 48;
             }
-            else if (this.quoteindex < 55)
+            else if (this.quoteindex < 60)
             {
-                this.quoteindex = 55;
+                this.quoteindex = 60;
             }
-            else if (this.quoteindex < 66)
+            else if (this.quoteindex < 72)
             {
-                this.quoteindex = 66;
+                this.quoteindex = 72;
             }
-            else if (this.quoteindex < 77)
+            else if (this.quoteindex < 84)
             {
-                this.quoteindex = 77;
+                this.quoteindex = 84;
             }
             else
             {
