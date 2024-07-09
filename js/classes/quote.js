@@ -101,7 +101,7 @@ class Quote{
     updateright()
     {
         // move one quote forward
-        if (this.quoteindex == 77)
+        if (this.quoteindex == 84)
         {
             this.quoteindex = 0;
         }
@@ -116,7 +116,7 @@ class Quote{
         // move one quote forward
         if (this.quoteindex == 0)
         {
-            this.quoteindex = 77;
+            this.quoteindex = 84;
         }
         else
         {
