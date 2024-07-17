@@ -1,4 +1,3 @@
-const textbox = document.querySelector("#text-overlay");
 
 class Quote{
     constructor({quotesToUse = [], quoteindex, font ="50px Arial"}){
@@ -8,7 +7,7 @@ class Quote{
         this.font = font
 
         this.position = {
-            x: canvas.width+5,
+            x: canvas.width+500,
             y: 250
         }
 
@@ -16,6 +15,8 @@ class Quote{
             x:-2,
             y:0
         }
+
+        
     }
 
 
@@ -134,6 +135,20 @@ class Quote{
 
     display()
     {
+        if(this.quoteindex == 11 || this.quoteindex == 23 || this.quoteindex == 35 || this.quoteindex == 47 || this.quoteindex == 59 ||this.quoteindex == 71 ||this.quoteindex == 83)
+        {
+            textbox.style.top = '10%';
+            textbox.style.paddingLeft = '200px'
+            textbox.style.paddingRight = '200px'
+
+        }
+        else
+        {
+            textbox.style.top = '20%';
+            textbox.style.paddingLeft = '250px'
+            textbox.style.paddingRight = '250px'
+            
+        }
         this.quoteToDisplay = this.quotesToUse[this.quoteindex]
         textbox.textContent = this.quoteToDisplay;
     }

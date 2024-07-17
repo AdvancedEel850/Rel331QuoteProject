@@ -16,13 +16,13 @@ body{
 #text-overlay 
 { 
     position: absolute;
-    width:1000px;
     height:200px;
     text-align: center;
     vertical-align: center; 
-    top: 10%; 
-    left: 10%; 
-    margin: 100px 100px 100px 100px;
+    display:flex;
+    justify-content: center;
+    padding-left:250px;
+    padding-right:250px;
     font-size: 24px; 
     color: white; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
@@ -31,12 +31,10 @@ body{
 #controls
 {
     position: absolute;
-    width:1000px;
     height:100px;
-    text-align: center;
-    vertical-align: center; 
+    display: flex;
+    justify-content: center;
     top: 80%; 
-    left: 17.5%;
     font-size: 24px; 
     color: white; 
     text-shadow: 2px 2px 4px rgba(252, 252, 252, 0.562); 
